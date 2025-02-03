@@ -10,3 +10,4 @@ transformers
 gradio
 notebook
 ipywidgets
+tensorflow[and-cuda] # for GPU support (without CUDA use this : tensorflow)
