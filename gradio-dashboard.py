@@ -103,4 +103,4 @@ with gr.Blocks(theme = gr.themes.Ocean()) as dashboard:
 
 
 if __name__ == "__main__":
-    dashboard.launch(share=True)
+    dashboard.launch(share=True, inbrowser=True)
