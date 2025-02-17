@@ -84,7 +84,7 @@ def recommend_books(
 categories = ["All"] + sorted(books["simple_categories"].unique())
 tones = ["All"] + ["Happy", "Surprising", "Angry", "Suspenseful", "Sad"]
 
-with gr.Blocks(theme = gr.themes.Ocean()) as dashboard:
+with gr.Blocks(theme = gr.themes.Citrus()) as dashboard:
     gr.Markdown("# Book Recommendation System")
 
     with gr.Row():
@@ -102,5 +102,11 @@ with gr.Blocks(theme = gr.themes.Ocean()) as dashboard:
                         outputs = output)
 
 
+
 if __name__ == "__main__":
-    dashboard.launch(share=True, inbrowser=True)
+    dashboard.launch(
+        server_name="0.0.0.0",  # Allow external connections
+        server_port=7860,       # Specify port
+        share=True, 
+        inbrowser=True
+    )
